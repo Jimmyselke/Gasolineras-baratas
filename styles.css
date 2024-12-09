@@ -1,0 +1,217 @@
+/* Estilos generales */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #0056b3;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+main {
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Sección de búsqueda */
+.search-section {
+    background-color: white;
+    padding: 1.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-section form {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.search-section input[type="number"] {
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 120px;
+    transition: border-color 0.3s ease;
+}
+
+.search-section input[type="number"]:focus {
+    border-color: #0056b3;
+    outline: none;
+}
+
+.search-section button {
+    padding: 0.75rem 1.5rem;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.search-section button:hover {
+    background-color: #003f88;
+    transform: translateY(-2px);
+}
+
+/* Contenedor de gasolineras */
+.gasolineras-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+/* Tarjetas de gasolineras */
+.gasolinera-card {
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    width: 320px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+}
+
+.gasolinera-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.gasolinera-card h2 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: #0056b3;
+    font-weight: bold;
+}
+
+.gasolinera-card p {
+    margin: 0.5rem 0;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.gasolinera-card .btn-route {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.gasolinera-card .btn-route:hover {
+    background-color: #1e7e34;
+}
+
+/* Mapa */
+#map-section {
+    height: 350px;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    border-radius: 8px; /* Bordes redondeados */
+    border: 2px solid #0056b3; /* Borde azul para el mapa */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para profundidad */
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #f1f1f1;
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 2rem;
+    border-top: 1px solid #ddd;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    /* Ajustes generales para pantallas de tablets y móviles */
+    header {
+        font-size: 1.25rem;
+        padding: 1rem;
+    }
+
+    main {
+        padding: 1.5rem 1rem;
+    }
+
+    /* Ajustamos el tamaño del formulario de búsqueda */
+    .search-section form {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .search-section input[type="number"], .search-section button {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .gasolinera-card {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    /* Ajuste del mapa */
+    #map-section {
+        height: 250px;
+        max-width: 100%;
+    }
+
+    /* Ajustes en el footer */
+    footer {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Ajustes para pantallas muy pequeñas, como móviles en modo vertical */
+    header {
+        font-size: 1.1rem;
+    }
+
+    .search-section input[type="number"], .search-section button {
+        padding: 0.75rem;
+        font-size: 1rem;
+    }
+
+    .gasolinera-card {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    #map-section {
+        height: 200px;
+    }
+
+    footer {
+        font-size: 0.75rem;
+    }
+}

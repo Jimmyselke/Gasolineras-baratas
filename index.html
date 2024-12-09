@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buscador de Gasolineras</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1 class="title">Gasolineras</h1>
+      <p class="subtitle">Encuentra las gasolineras más cercanas y baratas</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="search-section">
+        <form id="search-form">
+          <label for="distance">Radio (km):</label>
+          <!-- Establecemos min="0" para evitar números negativos -->
+          <input type="number" id="distance" name="distance" placeholder="Ej. 10" required min="0">
+          <button type="submit">Buscar</button>
+        </form>
+      </section>
+      
+
+    <section id="map-container" class="map-container">
+      <div id="map-section"></div>
+    </section>
+
+    <section id="results-section" class="results-section">
+      <div id="gasolineras" class="gasolineras-container">
+        <p class="empty-message">Introduce un radio para buscar gasolineras cercanas...</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Datos obtenidos de la API del Ministerio de Energía.</p>
+    </div>
+  </footer>
+
+  <script src="Gasolineras.js"></script>
+</body>
+</html>
