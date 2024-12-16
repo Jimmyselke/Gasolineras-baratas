@@ -66,3 +66,7 @@ Es una librería de JavaScript para crear mapas interactivos.
 Se carga desde un CDN y se utiliza para la visualización del mapa de gasolineras.
 Leaflet.css:
 Estilos asociados con la librería Leaflet.js que definen el aspecto básico del mapa y sus controles.
+
+
+NOTA!!
+Creo que mi nota podria ser un 8.
